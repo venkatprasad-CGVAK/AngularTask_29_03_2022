@@ -1,0 +1,62 @@
+<div class="container divBody">
+  <h1 style="text-align: center;"><u>
+      {{mainTitle}}
+    </u></h1>
+
+  <h2>1. {{task1}}</h2>
+  <div>
+    <h2 style="text-align:center">User Profile Card</h2>
+
+    <div class="card">
+
+      <h3>{{details.name}}</h3>
+      <p class="title">{{details.designation}}</p>
+      <p class="title">{{details.address.doorNo}},{{details.address.city}},{{details.address.state}}</p>
+    </div>
+  </div>
+  <br>
+  <h2>2. {{task2}}</h2>
+  <br>
+  <div>
+    <button [disabled]="isDisabledT" class="btn btn-primary">I am disabled</button>
+  <br>
+  <br>
+  <button [disabled]="isDisabledF" class="btn btn-primary">I am enabled</button>
+  </div>
+  <br>
+  <h2>3. {{task3}}</h2>
+  <br>
+  <h3>Counter</h3>
+  <br>
+  <div class="row">
+    <div class="col-3"><button id="counterBtn" class="btn btn-primary" (click)="decrementtCounter()">-</button></div>
+
+    <div class="col-3">
+      <button class="btn btn-secondary" id="cnt">{{counter}}</button>
+    </div>
+    <div class="col-3"> <button class="btn btn-primary" (click)="incrementCounter()">+</button></div>
+  </div>
+  <br>
+  <h2>4. {{task4}}</h2>
+  <br>
+  <div>
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Age</th>
+          <th scope="col">City</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let friend of friendslist">
+          <th scope="row">{{friend.id}}</th>
+          <td>{{friend.name}}</td>
+          <td>{{friend.age}}</td>
+          <td>{{friend.city}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
